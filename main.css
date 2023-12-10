@@ -1,0 +1,52 @@
+body{
+    font-family: "cairo" , sans-serif;
+}
+.main{
+
+    width: 100%;
+}
+.main::before{
+    content: " ";
+    width: 200%;
+    height: 100%;
+    background-color: #085dcd;
+    left: 50%;
+    top: 50%;
+    transform:translateX(-50%) skew( 0 , -10deg );
+    position: fixed;
+    animation: wave 3s ease-in-out infinite alternate;
+    border-radius: 50%;
+
+}
+@keyframes wave {
+    0% {
+        transform:translateX(-50%) skew(0 , -10deg);
+    }
+    100%{
+        transform:translateX(-30%) skew( 10deg , 0 );
+    }
+}
+
+.main .content{
+background-color: rgb(172, 163, 163);
+width: 200px;
+height: 400px;
+padding: 20px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50% , -50%);
+border-radius: 6px;
+text-align: center;
+}
+.main .content div{
+    height:300px;
+    background-color: #085dcd;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size:50px;
+}
